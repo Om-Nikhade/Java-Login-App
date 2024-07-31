@@ -93,12 +93,10 @@ Deploy AWS infrastructure resources as per the architecture diagram.
      - Configure security groups to allow port 22 from Bastion Host and port 8080 from the private NLB.
    - Set up an Auto Scaling Group.
 
-3. **Nginx (Frontend)**:
+3. **Tomcat (Frontend)**:
    - Create a public-facing Network Load Balancer and Target Group.
    - Create a Launch Configuration:
-     - Use Nginx Golden AMI.
-     - Update `proxy_pass` rules in `nginx.conf` and reload the Nginx service.
-     - Configure security groups to allow port 22 from Bastion Host and port 80 from the public NLB.
+     - Configure security groups to allow port 22 from Bastion Host and port 8080 from the public NLB.
    - Set up an Auto Scaling Group.
 
 ## Application Deployment
@@ -116,8 +114,6 @@ Deploy AWS infrastructure resources as per the architecture diagram.
 1. Ensure administrators can log into EC2 instances via the session manager and Bastion Host.
 2. Verify that end-users can access the application from a public internet browser.
 
-## Final Note
+@om-devops
+https://github.com/Om-devops
 
-If you find this repository useful for learning, please give it a star on GitHub. Thank you!
-
-### Authored by [Harshhaa Reddy](https://github.com/NotHarshhaa)
